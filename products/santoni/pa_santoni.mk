@@ -19,12 +19,13 @@ ifeq (pa_santoni,$(TARGET_PRODUCT))
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
+#Set bootanimation to 720p display
 TARGET_BOOT_ANIMATION_RES := 720
 
 include device/qcom/common/common.mk
 
 # Inherit AOSP device configuration
-$(call inherit-product, device/xiaomi/santoni/full_santoni.mk)
+$(call inherit-product, device/xiaomi/santoni/device.mk)
 
 # Override AOSP build properties
 PRODUCT_NAME := pa_santoni
@@ -37,6 +38,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
      BUILD_FINGERPRINT="Xiaomi/santoni/santoni:7.1.2/N2G47H/7.7.6:user/release-keys" \
     PRIVATE_BUILD_DESC="santoni-user 7.1.2 N2G47H 7.7.6 release-keys"
+
+TARGET_VENDOR := Xiaomi
 
 # Paranoid Android platform
 include vendor/pa/main.mk
