@@ -31,13 +31,17 @@ $(call inherit-product, device/xiaomi/santoni/device.mk)
 PRODUCT_NAME := pa_santoni
 PRODUCT_DEVICE := santoni
 PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := Redmi 4X
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
+TARGET_VENDOR_PRODUCT_NAME := santoni
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
      BUILD_FINGERPRINT="Xiaomi/santoni/santoni:7.1.2/N2G47H/7.7.6:user/release-keys" \
-    PRIVATE_BUILD_DESC="santoni-user 7.1.2 N2G47H 7.7.6 release-keys"
+     PRIVATE_BUILD_DESC="santoni-user 7.1.2 N2G47H 7.7.6 release-keys"
+     DEVICE_MAINTAINERS="Nikesh Kataria"
 
 TARGET_VENDOR := Xiaomi
 
